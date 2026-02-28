@@ -6,35 +6,80 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Contact CodeVanta Labs</h1>
+  <header class="main-header">
+        <div class="logo">CodeVanta Labs</div>
         <nav>
-            <a href="index.html">Home</a> | 
-            <a href="about.html">About</a> | 
-             <a href="services.html">Services</a> |
-            <a href="projects.html">Projects</a> | 
+            <a href="index.html" class="active">Home</a>
+           <a href="about.html">About & Projects</a>
             <a href="lab.html">Dev Lab</a> | 
             <a href="contact.html">Contact</a>
+            <button id="theme-toggle" class="theme-btn" title="Toggle Dark/Light Mode">🌓</button>
         </nav>
     </header>
 
-    <main>
-        <h2>Get In Touch</h2>
-        <form action="#" method="POST">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+  <main class="contact-container">
+    <div class="glass-card contact-wrapper">
+        
+        <div class="contact-info">
+            <h2>Let's Build Something Great.</h2>
+            <p class="text-muted">Looking for full-stack development, custom software, or specialized estimators? Reach out to discuss your project requirements.</p>
+            
+            <div class="info-blocks">
+                <div class="info-item">
+                    <strong>🏢 CodeVanta Labs</strong>
+                    <p>Software Development Services<br>
+                                     &<br>
+                         Custom Software Manufacturer</p>
+                </div>
+                <div class="info-item">
+                    <strong>📧 Email</strong>
+                    <p>codevantaaa@gmail.com</p>
+                    <p>codevantaa__labs</p>
+                </div>
+                <div class="info-item">
+                    <strong>📍 Location</strong>
+                    <p>India</p>
+                </div>
+            </div>
+        </div>
 
-            <label for="subject">Subject:</label><br>
-            <input type="text" id="subject" name="subject" required><br><br>
+        <form action="#" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@company.com" required>
+            </div>
 
-            <button type="submit">Send Message</button>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter exactly 10 digits" placeholder="9876543210" required>
+                <small class="hint-text">10-digit format required.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Project Type</label>
+                <select id="service" name="service">
+                    <option value="web">Web Application</option>
+                    <option value="billing">Billing / Management Software</option>
+                    <option value="mobile">Mobile App Development</option>
+                    <option value="other">Other Inquiry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Project Details</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Send Message</button>
         </form>
-    </main>
+
+    </div>
+</main>
 </body>
 </html>

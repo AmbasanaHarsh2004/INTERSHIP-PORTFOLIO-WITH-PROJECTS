@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+  <header class="main-header">
         <div class="logo">CodeVanta Labs</div>
         <nav>
-           <a href="index.html">Home</a> | 
-            <a href="about.html">About</a> | 
-             <a href="services.html">Services</a> |
-            <a href="projects.html">Projects</a> | 
+            <a href="index.html" class="active">Home</a>
+           <a href="about.html">About & Projects</a>
             <a href="lab.html">Dev Lab</a> | 
             <a href="contact.html">Contact</a>
+            <button id="theme-toggle" class="theme-btn" title="Toggle Dark/Light Mode">🌓</button>
         </nav>
     </header>
+
 
 <main class="lab-dashboard">
     <h1 class="glitch-text">Dev Operations Lab</h1>
@@ -49,13 +49,14 @@
 
         <div class="glass-card module-gallery">
             <h3>Visual Assets</h3>
-            <div class="viewer-frame">
-                <img id="large-img" src="https://picsum.photos/id/1/600/400" alt="Main View">
-            </div>
-           <div class="thumbnail-strip">
-    <img src="https://picsum.photos/id/10/100" onclick="showImage(this.src)" class="thumb-node" alt="Sample 1">
-    <img src="https://picsum.photos/id/20/100" onclick="showImage(this.src)" class="thumb-node" alt="Sample 2">
-    <img src="https://picsum.photos/id/30/100" onclick="showImage(this.src)" class="thumb-node" alt="Sample 3">
+    <div class="main-image-container" style="text-align: center; margin-bottom: 15px;">
+    <img id="large-img" src="https://picsum.photos/id/1/600/400" alt="Main View" style="max-width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2);">
+</div>
+
+<div class="thumbnail-strip" style="display: flex; gap: 10px; justify-content: center;">
+    <img src="https://picsum.photos/id/1/600/400" onclick="showImage(this.src)" class="thumb-node" alt="Sample 1" style="width: 80px; height: 50px; cursor: pointer; border-radius: 4px; transition: transform 0.2s;">
+    <img src="https://picsum.photos/id/2/600/400" onclick="showImage(this.src)" class="thumb-node" alt="Sample 2" style="width: 80px; height: 50px; cursor: pointer; border-radius: 4px; transition: transform 0.2s;">
+    <img src="https://picsum.photos/id/3/600/400" onclick="showImage(this.src)" class="thumb-node" alt="Sample 3" style="width: 80px; height: 50px; cursor: pointer; border-radius: 4px; transition: transform 0.2s;">
 </div>
         </div>
     </div>

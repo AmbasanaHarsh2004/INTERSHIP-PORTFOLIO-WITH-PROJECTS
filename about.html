@@ -7,43 +7,69 @@
     
 </head>
 <body>
-    <header>
-        <h1>About Me</h1>
+  <header class="main-header">
+        <div class="logo">CodeVanta Labs</div>
         <nav>
-           <a href="index.html">Home</a> | 
-            <a href="about.html">About</a> | 
-             <a href="services.html">Services</a> |
-            <a href="projects.html">Projects</a> | 
+            <a href="index.html" class="active">Home</a>
+           <a href="about.html">About & Projects</a>
             <a href="lab.html">Dev Lab</a> | 
             <a href="contact.html">Contact</a>
+            <button id="theme-toggle" class="theme-btn" title="Toggle Dark/Light Mode">🌓</button>
         </nav>
     </header>
 
-    <main>
-        <h2>My Skills</h2>
-        <p>I specialize in HTML, CSS, PHP, Node.js, MySQL, and Java application development.</p>
-        
-        <img src="https://via.placeholder.com/300x200" alt="Server rack architecture">
 
-        <h2>My Top 3 Favorite Books</h2>
-        <table border="1">
-            <tr>
-                <th>Rank</th>
-                <th>Book Title</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Clean Code</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>The Pragmatic Programmer</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Design Patterns</td>
-            </tr>
-        </table>
-    </main>
+  <main class="about-container">
+    
+    <section class="glass-card profile-intro">
+        <div class="profile-text">
+            <h1>Hi, I'm HarshVardhan .</h1>
+                 <h3 class="role-title">{codevantaa__labs}</h3>
+            <h3 class="role-title">Full-Stack Software Developer</h3>
+            <p class="text-muted">I specialize in engineering custom, high-performance software solutions tailored to business operations. From complex medical databases to specialized industrial estimators, I build applications that solve real-world problems.</p>
+        </div>
+    </section>
+
+    <section class="glass-card skills-section mt-4">
+        <h2>Technical Arsenal</h2>
+        <div class="skills-grid">
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">PHP</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+        </div>
+    </section>
+
+    <section class="projects-section mt-4">
+        <h2 class="section-title">Featured Enterprise Projects</h2>
+        <div class="projects-grid">
+            
+            <div class="glass-card project-card">
+                <div class="project-icon">🏥</div>
+                <h3>Hospital Management System</h3>
+                <p class="project-client">Deployed for: Ambar Hospital & Soha Hospital</p>
+                <p class="text-muted">A comprehensive medical facility management tool handling patient records, appointments, and administrative workflows securely and efficiently.</p>
+            </div>
+
+            <div class="glass-card project-card">
+                <div class="project-icon">📐</div>
+                <h3>Aluminum & Glass Estimator</h3>
+                <p class="project-client">Built for: Somnath Glass & Aluminium</p>
+                <p class="text-muted">A specialized calculation engine designed to estimate material costs, dimensions, and precise pricing for industrial glass and aluminum projects.</p>
+            </div>
+
+            <div class="glass-card project-card">
+                <div class="project-icon">💻</div>
+                <h3>Farming tools Billing</h3>
+                <p class="project-client">Core Software Product</p>
+                <p class="text-muted">A robust, scalable billing and invoicing system designed to streamline financial tracking, inventory management, and client billing for modern businesses.</p>
+            </div>
+
+        </div>
+    </section>
+    
+</main>
 </body>
 </html>

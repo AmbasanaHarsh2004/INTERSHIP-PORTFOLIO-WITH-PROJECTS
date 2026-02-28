@@ -130,3 +130,21 @@ async function startUILogDownloads() {
     }
 }
 startUILogDownloads();
+
+
+// --- Assignment 10: Theme Toggle & Easter Egg Prank ---
+const themeBtn = document.getElementById('theme-toggle');
+const prankScreen = document.getElementById('prank-screen');
+
+if (themeBtn && prankScreen) {
+    themeBtn.addEventListener('click', () => {
+        // Show scary screen every time
+        prankScreen.style.display = 'flex'; 
+        
+        setTimeout(() => {
+            prankScreen.style.display = 'none'; // Hide it
+            alert("Nothing to worry, it was just a trick! 😉");
+            document.body.classList.toggle('light-theme'); // Change color
+        }, 2500);
+    });
+}

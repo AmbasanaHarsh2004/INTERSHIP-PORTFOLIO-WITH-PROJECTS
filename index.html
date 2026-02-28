@@ -6,22 +6,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="about.html">About</a> | 
-             <a href="services.html">Services</a> |
-            <a href="projects.html">Projects</a> | 
-            <a href="lab.html">Dev Lab</a> | 
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <header class="main-header">
+    <div class="logo">CodeVanta Labs</div>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About & Projects</a>
+        <a href="lab.html">Dev Lab</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-btn" title="Toggle Dark/Light Mode">🌓</button>
+    </nav>
+</header>
 
-    <main>
-        <h2>Hello, I'm Harsh.</h2>
-        <p>I am a full-stack developer passionate about building scalable software solutions and mobile applications.</p>
-        <img src="https://via.placeholder.com/400x200" alt="A workspace with a laptop displaying code">
-    </main>
+<main class="hero-container">
+    <div class="hero-content">
+        <span class="badge">Full-Stack Software Developer</span>
+        <h1 class="hero-title">Engineering <span class="highlight">Custom Software</span> for Modern Business.</h1>
+        <p class="hero-subtitle">Specializing in high-performance web applications, medical databases, and complex industrial estimation tools.</p>
+        
+        <div class="hero-buttons">
+            <a href="about.html" class="btn-primary">View My Work</a>
+            <a href="contact.html" class="btn-secondary">Get in Touch</a>
+        </div>
+    </div>
+</main>
+
+<div id="prank-screen" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: black; color: #0f0; z-index: 9999; justify-content: center; align-items: center; font-family: monospace; font-size: 2rem; flex-direction: column;">
+    <span class="blink">> INITIALIZING WEBCAM PROTOCOL...</span>
+    <span style="font-size: 1rem; margin-top: 20px; color: red;">> BYPASSING SECURITY...</span>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
