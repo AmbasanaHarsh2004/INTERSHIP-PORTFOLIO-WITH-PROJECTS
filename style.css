@@ -1,0 +1,229 @@
+/* Custom Variables for a Unique Brand Identity */
+:root {
+    --bg-dark: #0f172a;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --accent-blue: #38bdf8;
+    --accent-purple: #818cf8;
+    --text-main: #f1f5f9;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* 1. Header with Glassmorphism (Req: Styled Header [cite: 9]) */
+header {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* (Req: Sticky Nav ) */
+    top: 0;
+    z-index: 1000;
+}
+
+/* 2. Professional Hover Effects (Req: Hover Effects [cite: 11]) */
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+nav a:hover {
+    color: var(--accent-blue);
+    opacity: 1;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+/* 3. Hero Section Animation */
+main {
+    padding: 4rem 10%;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. Service Cards with 3-Columns (Req: Flexbox [cite: 10]) */
+.services-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    flex: 1;
+    background: var(--glass-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-purple);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* 5. Responsive Media Queries (Req: Mobile Responsive [cite: 12]) */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+    }
+}
+
+
+/* 
+///////////
+new assignmet code
+/////////// */
+/* Styling for the Counter and Character Counter */
+.pro-section {
+    background: var(--glass-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+#tweet-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--accent-blue);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.thumb {
+    width: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, border 0.2s;
+}
+
+.thumb:hover {
+    transform: scale(1.1);
+    border: 2px solid var(--accent-blue);
+}
+
+/* 
+///////////////
+lab.html
+////////////// */
+
+/* Dashboard Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Realistic Counter UI */
+.display-screen {
+    background: #000;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-blue);
+    font-family: 'Courier New', monospace;
+    color: var(--accent-blue);
+    font-size: 2.5rem;
+    box-shadow: inset 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.cyber-btn {
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.cyber-btn:hover {
+    background: var(--accent-blue);
+    color: white;
+}
+
+/* Terminal / Character Counter Progress Bar */
+.progress-bg {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent-blue);
+    transition: width 0.3s ease;
+}
+
+/* Gallery Hover Node */
+.thumb-node {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.thumb-node:hover {
+    opacity: 1;
+    border: 2px solid var(--accent-blue);
+    transform: scale(1.1);
+}
+
+.api-output ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+}
+
+.api-output li {
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-log {
+    background: #000;
+    padding: 10px;
+    height: 100px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #0f0; /* Green terminal text */
+    border-radius: 5px;
+}

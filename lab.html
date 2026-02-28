@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Lab - CodeVanta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">CodeVanta Labs</div>
+        <nav>
+           <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+             <a href="services.html">Services</a> |
+            <a href="projects.html">Projects</a> | 
+            <a href="lab.html">Dev Lab</a> | 
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+<main class="lab-dashboard">
+    <h1 class="glitch-text">Dev Operations Lab</h1>
+
+    <div class="grid-container">
+        <div class="glass-card module-counter">
+            <h3>System Pulse (Counter)</h3>
+            <p class="module-desc">Adjust the system frequency.</p>
+            <div class="control-panel">
+                <button id="decrement" class="cyber-btn">-</button>
+                <div class="display-screen">
+                    <span id="counter-value">0</span>
+                </div>
+                <button id="increment" class="cyber-btn">+</button>
+            </div>
+        </div>
+
+        <div class="glass-card module-terminal">
+            <h3>Terminal Input</h3>
+            <p class="module-desc">Live character synchronization.</p>
+            <textarea id="tweet-box" maxlength="280" placeholder="Awaiting data input..."></textarea>
+            <div class="status-bar">
+                <div class="progress-bg">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <span id="char-count">0</span>/280
+            </div>
+        </div>
+
+        <div class="glass-card module-gallery">
+            <h3>Visual Assets</h3>
+            <div class="viewer-frame">
+                <img id="large-img" src="https://picsum.photos/id/1/600/400" alt="Main View">
+            </div>
+           <div class="thumbnail-strip">
+    <img src="https://picsum.photos/id/10/100" onclick="showImage(this.src)" class="thumb-node" alt="Sample 1">
+    <img src="https://picsum.photos/id/20/100" onclick="showImage(this.src)" class="thumb-node" alt="Sample 2">
+    <img src="https://picsum.photos/id/30/100" onclick="showImage(this.src)" class="thumb-node" alt="Sample 3">
+</div>
+        </div>
+    </div>
+</main> 
+
+
+<div class="glass-card module-network">
+    <h3>Network Operations</h3>
+    <p class="module-desc">Live API Data & Download Stream</p>
+    
+    <div class="api-output">
+        <h4>Top 5 Titles:</h4>
+        <ul id="titles-list">
+            <li>Awaiting data...</li>
+        </ul>
+    </div>
+
+    <div class="download-status">
+        <h4>Download Queue:</h4>
+        <div id="download-log" class="terminal-log"></div>
+    </div>
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

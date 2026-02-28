@@ -1,0 +1,49 @@
+<div id="counter-app">
+    <button id="decrement">-</button>
+    <span id="counter-value">0</span>
+    <button id="increment">+</button>
+</div>
+
+<script>
+    let count = 0;
+    const valueDisplay = document.getElementById('counter-value');
+    
+    document.getElementById('increment').addEventListener('click', () => {
+        count++;
+        valueDisplay.innerText = count;
+    });
+    
+    document.getElementById('decrement').addEventListener('click', () => {
+        count--;
+        valueDisplay.innerText = count;
+    });
+</script>
+
+
+<div class="gallery">
+    <div class="main-view">
+        <img id="large-img" src="placeholder-large.jpg" alt="Large View" style="width: 100%;">
+    </div>
+    <div class="thumbnails">
+        <img class="thumb" src="img1.jpg" onclick="showImage('img1.jpg')" style="width: 50px;">
+        <img class="thumb" src="img2.jpg" onclick="showImage('img2.jpg')" style="width: 50px;">
+    </div>
+</div>
+
+<script>
+    function showImage(src) {
+        document.getElementById('large-img').src = src;
+    }
+</script>
+
+<textarea id="tweet-box" maxlength="280" placeholder="What's happening?"></textarea>
+<p><span id="char-count">0</span> / 280 characters</p>
+
+<script>
+    const tweetBox = document.getElementById('tweet-box');
+    const charCount = document.getElementById('char-count');
+
+    tweetBox.addEventListener('input', () => {
+        charCount.innerText = tweetBox.value.length;
+    });
+</script>
